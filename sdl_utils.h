@@ -1,6 +1,8 @@
 #include <SDL/SDL.h>
 
-//  namespace to prevent overriding similar function
+/**
+    Random utility functions having to do with SDL.
+ **/
 namespace outOfSight
 {
     /**

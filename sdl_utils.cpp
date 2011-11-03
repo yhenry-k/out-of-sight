@@ -12,7 +12,7 @@ namespace outOfSight
         SDL_Surface *temp, *sprite;
         temp = IMG_Load(filename);
         if(temp == NULL)
-            DIE("Unable to load sprite\n");
+            return(NULL);
 
         // convert the image to something we can use
         sprite = SDL_DisplayFormatAlpha(temp);
