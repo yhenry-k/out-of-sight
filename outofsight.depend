@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1320284156 source:e:\outofsight\outofsight\main.cpp
+1320301776 source:e:\outofsight\outofsight\main.cpp
 	<stdlib.h>
 	<SDL/SDL.h>
+	<SDL/SDL_image.h>
 
 1255800449 e:\outofsight\editor\libs\sdl-1.2.14\include\sdl\sdl.h
 	"SDL_main.h"
@@ -182,4 +183,10 @@
 	"SDL_stdinc.h"
 	"begin_code.h"
 	"close_code.h"
+
+1320301795 e:\outofsight\editor\libs\sdl_image_1.2_mingw\include\sdl\sdl_image.h
+	"SDL/SDL.h"
+	"SDL/SDL_version.h"
+	"SDL/begin_code.h"
+	"SDL/close_code.h"
 
