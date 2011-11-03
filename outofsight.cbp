@@ -39,7 +39,13 @@
 			<Add library="..\editor\libs\SDL-1.2.14\lib\libSDL.dll.a" />
 			<Add library="..\editor\libs\SDL_image_1.2_mingw\lib\libSDL_image.dll.a" />
 		</Linker>
+		<Unit filename="common.h" />
+		<Unit filename="girl.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="sdl_utils.cpp">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sdl_utils.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
