@@ -1,8 +1,10 @@
 # depslib dependency file v1.0
-1320357053 source:e:\outofsight\outofsight\main.cpp
+1320364297 source:e:\outofsight\outofsight\main.cpp
 	<SDL/SDL.h>
 	"common.h"
+	"assets.h"
 	"sdl_utils.h"
+	"girl.h"
 
 1255800449 e:\outofsight\editor\libs\sdl-1.2.14\include\sdl\sdl.h
 	"SDL_main.h"
@@ -190,18 +192,45 @@
 	"SDL/begin_code.h"
 	"SDL/close_code.h"
 
-1320355283 source:e:\outofsight\outofsight\girl.cpp
+1320364169 source:e:\outofsight\outofsight\girl.cpp
+	"common.h"
+	"sdl_utils.h"
+	"girl.h"
 
-1320357176 e:\outofsight\outofsight\common.h
+1320363498 e:\outofsight\outofsight\common.h
 	<cstdlib>
 	<cstdio>
 
-1320356336 e:\outofsight\outofsight\sdl_utils.h
+1320364285 e:\outofsight\outofsight\sdl_utils.h
 	<SDL/SDL.h>
 
-1320356911 source:e:\outofsight\outofsight\sdl_utils.cpp
+1320364245 source:e:\outofsight\outofsight\sdl_utils.cpp
 	<SDL/SDL.h>
 	<SDL/SDL_image.h>
 	"common.h"
 	"sdl_utils.h"
+
+1320363746 e:\outofsight\outofsight\girl.h
+	<SDL/SDL_image.h>
+
+1320365472 e:\outofsight\editor\libs\sdl_image-1.2_mingw\include\sdl\sdl_image.h
+	"SDL/SDL.h"
+	"SDL/SDL_version.h"
+	"SDL/begin_code.h"
+	"SDL/close_code.h"
+
+1320364288 e:\outofsight\outofsight\assets.h
+	<SDL/SDL.h>
+
+1320364241 source:e:\outofsight\outofsight\assets.cpp
+	<SDL/SDL.h>
+	<SDL/SDL_image.h>
+	"common.h"
+	"sdl_utils.h"
+
+1320366255 e:\outofsight\editor\libs\sdl_image-1.2.10-mingw\include\sdl\sdl_image.h
+	"SDL/SDL.h"
+	"SDL/SDL_version.h"
+	"SDL/begin_code.h"
+	"SDL/close_code.h"
 

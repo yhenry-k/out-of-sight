@@ -1,5 +1,8 @@
 #include <SDL/SDL.h>
 
+#ifndef __OOS_SDL_UTILS__
+#define __OOS_SDL_UTILS__
+
 /**
     Random utility functions having to do with SDL.
  **/
@@ -13,3 +16,6 @@ namespace outOfSight
      **/
     SDL_Surface*    loadImage(const char* filename);
 }
+
+#endif
+

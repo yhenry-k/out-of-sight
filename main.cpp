@@ -1,10 +1,9 @@
 #include <SDL/SDL.h>
 
 #include "common.h"
+#include "assets.h"
 #include "sdl_utils.h"
-
-SDL_Surface *sprite, *screen;
-SDL_Rect src, dest;
+#include "girl.h"
 
 Uint32 drawCallback(Uint32 interval, void *param)
 {
@@ -36,31 +35,22 @@ int main(int argc, char *argv[])
     atexit(SDL_Quit);
 
     // get window
-    screen = SDL_SetVideoMode(640, 480, 16, SDL_HWSURFACE | SDL_DOUBLEBUF);
+    SDL_Surface *screen = SDL_SetVideoMode(640, 480, 16, SDL_HWSURFACE | SDL_DOUBLEBUF);
     SDL_WM_SetCaption(WINDOW_TITLE, 0);
     if(screen == NULL)
         DIE("Unable to set 640x480 video: %s\n", SDL_GetError());
 
     // get sprite
-    sprite = outOfSight::loadImage("assets/girl-stick-figure.jpg");
-    if(sprite == NULL)
-        DIE("Unable to load sprite: %s\n", SDL_GetError());
-
-    src.x = 0;
-    src.y = 0;
-    src.w = sprite->w;
-    src.h = sprite->h;
-
-    dest.x = 20;
-    dest.y = 20;
-    dest.w = sprite->w;
-    dest.h = sprite->h;
+    if(!outOfSight::loadImages())
+        DIE("Unable to load sprites: %s\n", SDL_GetError());
 
     Uint32 delay = (Uint32)(1000.0 / GAME_FPS) / 10 * 10;
     SDL_TimerID timerID = SDL_AddTimer(delay, drawCallback, NULL);
     if(timerID == NULL)
         DIE("Unable to make timer: %s\n", SDL_GetError());
 
+    outOfSight::girl girl(10, 10);
+    
     // main game loop
     int done = 0;
     SDL_Event event;
@@ -71,7 +61,8 @@ int main(int argc, char *argv[])
             switch(event.type)
             {
                 case SDL_USEREVENT:
-                    SDL_BlitSurface(sprite, &src, screen, &dest);
+                    SDL_FillRect(screen, &screen->clip_rect, SDL_MapRGB(screen->format, 255, 255, 255));
+                    girl.blit(screen);
                     SDL_Flip(screen);
                     break;
 
@@ -93,7 +84,7 @@ int main(int argc, char *argv[])
         }
     }   // End while
 
-    SDL_FreeSurface(sprite);
+    outOfSight::freeImages();
     return(0);
 }
 
