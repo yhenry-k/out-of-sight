@@ -30,15 +30,17 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="E:\outofsight\editor\libs\SDL_image_1.2_mingw\include" />
-			<Add directory="E:\outofsight\editor\libs\SDL-1.2.14\include" />
+			<Add directory="..\editor\libs\SDL_image-1.2.10-mingw\include" />
+			<Add directory="..\editor\libs\SDL-1.2.14\include" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
 			<Add library="..\editor\libs\SDL-1.2.14\lib\libSDLmain.a" />
 			<Add library="..\editor\libs\SDL-1.2.14\lib\libSDL.dll.a" />
-			<Add library="..\editor\libs\SDL_image_1.2_mingw\lib\libSDL_image.dll.a" />
+			<Add library="..\editor\libs\SDL_image-1.2.10-mingw\lib\libSDL_image.dll.a" />
 		</Linker>
+		<Unit filename="assets.cpp" />
+		<Unit filename="assets.h" />
 		<Unit filename="common.h" />
 		<Unit filename="girl.cpp" />
 		<Unit filename="girl.h" />
